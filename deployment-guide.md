@@ -1,93 +1,132 @@
-# 🚀 Guide de Déploiement GitHub Pages - Portfolio Ugur Balci
+# 🚀 Portfolio Ugur Balci - Étudiant-Entrepreneur
 
-## 📋 Étapes de Déploiement
+[![Deploy to GitHub Pages](https://github.com/ugurba/Balci/actions/workflows/deploy.yml/badge.svg)](https://github.com/ugurba/Balci/actions/workflows/deploy.yml)
+[![Website](https://img.shields.io/website?url=https%3A%2F%2Fugurba.github.io%2FBalci%2F)](https://ugurba.github.io/Balci/)
 
-### 1. Préparation des Fichiers
+> Portfolio moderne d'un étudiant-entrepreneur passionné par l'Intelligence Artificielle et la Data Science
 
-Votre portfolio est maintenant optimisé pour GitHub Pages avec :
-- ✅ SEO optimisé pour "Ugur Balci" 
-- ✅ Métadonnées Open Graph et Twitter
-- ✅ Schema.org markup
-- ✅ Sitemap XML et robots.txt
-- ✅ Configuration homepage dans package.json
+**🌐 Site en ligne :** [ugurba.github.io/Balci](https://ugurba.github.io/Balci/)
 
-### 2. Commands Git pour Push
+## 👨\u200d💻 À propos
 
+Bienvenue sur le repository de mon portfolio personnel ! Je suis **Ugur Balci**, étudiant en Master 1 IMA (Interactions de l'Informatique et des Mathématiques pour l'IA) à l'Université Toulouse III - Paul Sabatier et entrepreneur.
+
+### 🎯 Profil
+- 🎓 **Étudiant** en Master Data Science & IA 
+- 🚀 **Entrepreneur** : Fondateur d'Imphair et Butob
+- 💼 **Recherche** : Alternance en Data Science/Intelligence Artificielle
+- 🌍 **Langues** : Français, Turc, Anglais, Allemand
+- 📍 **Localisation** : Toulouse, France
+
+## 🛠️ Technologies Utilisées
+
+### Frontend
+- **React 19** avec hooks modernes
+- **Tailwind CSS** pour le styling
+- **Shadcn/UI** pour les composants
+- **Lucide React** pour les icônes
+- **React Router** pour la navigation
+
+### Design & UX
+- Design responsive mobile-first
+- Animations fluides et micro-interactions
+- Palette de couleurs moderne (bleu/violet)
+- Typography optimisée pour la lisibilité
+
+### SEO & Performance
+- **Métadonnées** optimisées pour "Ugur Balci"
+- **Schema.org** markup pour les moteurs de recherche
+- **Open Graph** et Twitter Cards
+- **Sitemap XML** et robots.txt
+- **Core Web Vitals** optimisés
+
+## 🚀 Déploiement
+
+### Automatique via GitHub Actions
+Le site se déploie automatiquement sur chaque push vers `main` grâce à GitHub Actions.
+
+### Manuel
 ```bash
-# Dans le dossier /app/frontend/, exécutez :
+# Cloner le repository
+git clone https://github.com/ugurba/Balci.git
+cd Balci
 
-# Initialiser le repo git (si pas déjà fait)
-git init
+# Installer les dépendances
+yarn install
 
-# Ajouter votre remote GitHub
-git remote add origin https://github.com/UgurBlc/github.io.git
+# Développement local
+yarn start
 
-# Ajouter tous les fichiers
-git add .
-
-# Premier commit
-git commit -m "🚀 Initial portfolio deployment - Ugur Balci"
-
-# Push vers GitHub
-git push -u origin main
-```
-
-### 3. Installation et Build
-
-```bash
-# Installer gh-pages pour le déploiement automatique
-yarn add --dev gh-pages
-
-# Build le projet
+# Build de production
 yarn build
 
 # Déployer sur GitHub Pages
 yarn deploy
 ```
 
-### 4. Configuration GitHub Pages
+## 📂 Structure du Projet
 
-1. Allez sur https://github.com/UgurBlc/github.io
-2. Cliquez sur **Settings** 
-3. Scrollez vers **Pages**
-4. Source : **Deploy from a branch**
-5. Branch : **gh-pages** / **/ (root)**  
-6. Cliquez **Save**
-
-### 5. URL Finale
-
-Votre portfolio sera disponible sur : **https://ugurblc.github.io**
-
-### 6. SEO - Première Position "Ugur Balci"
-
-Pour être #1 sur Google :
-
-1. **Contenu unique** ✅ (Déjà fait)
-2. **Liens externes** : Ajoutez le lien sur LinkedIn, CV, Imphair
-3. **Google Search Console** : Ajoutez votre site
-4. **Mises à jour régulières** : Ajoutez vos projets/réalisations
-5. **Backlinks** : Partagez sur réseaux professionnels
-
-### 7. Commandes Utiles
-
-```bash
-# Pour mettre à jour le site
-git add .
-git commit -m "Update portfolio content"
-git push origin main
-yarn deploy
-
-# Pour build localement et tester
-yarn build
-yarn start
+```
+src/
+├── components/          # Composants React
+│   ├── ui/             # Composants UI réutilisables (Shadcn)
+│   ├── Header.js       # Navigation principale
+│   ├── Hero.js         # Section héro
+│   ├── About.js        # À propos
+│   ├── Education.js    # Formation académique
+│   ├── Experience.js   # Expérience professionnelle
+│   ├── Skills.js       # Compétences techniques/business
+│   ├── Projects.js     # Portfolio de projets
+│   ├── Recommendations.js # Lettres de recommandation
+│   ├── Contact.js      # Formulaire de contact
+│   └── Footer.js       # Pied de page
+├── data/
+│   └── mock.js         # Données du portfolio
+├── pages/
+│   └── Home.js         # Page principale
+└── App.js              # Composant racine
 ```
 
-## 🎯 Résultats SEO Attendus
+## 🎨 Sections du Portfolio
 
-- **Titre** : "Ugur Balci - Étudiant-Entrepreneur en Data Science & IA"
-- **Meta description** optimisée
-- **Keywords** : Ugur Balci, Data Science, IA, Entrepreneur, Toulouse
-- **Schema markup** pour enrichir les résultats Google
-- **Open Graph** pour partages sociaux
+1. **🏠 Héro** - Présentation avec CTA alternance
+2. **👤 À Propos** - Profil étudiant-entrepreneur
+3. **🎓 Formation** - Parcours académique (CPGE → Master IMA)
+4. **💼 Expérience** - Entreprises créées + stages
+5. **⚡ Compétences** - Technical & Business skills
+6. **🚧 Projets** - Réalisations techniques et entrepreneuriales
+7. **⭐ Recommandations** - Lettres de recommandation
+8. **📞 Contact** - Formulaire + coordonnées
 
-Votre portfolio est maintenant prêt pour dominer les résultats de recherche "Ugur Balci" ! 🚀
+## 🎯 Objectifs SEO
+
+Ce portfolio est optimisé pour être **#1 sur Google** pour "Ugur Balci" :
+
+- ✅ Titre et description optimisés
+- ✅ Mots-clés stratégiques intégrés
+- ✅ Schema.org markup complet
+- ✅ Contenu riche et unique
+- ✅ Performance et accessibilité
+
+## 📈 Métriques Cibles
+
+- **Lighthouse Score** : 90+ sur tous les critères
+- **SEO Score** : 100/100
+- **Accessibility** : 100/100
+- **Performance** : 90+/100
+- **First Contentful Paint** : < 2s
+
+## 🤝 Contact & Opportunités
+
+Je suis actuellement à la **recherche d'une alternance** en Data Science/Intelligence Artificielle.
+
+- 📧 **Email** : ugur.balciccc@gmail.com
+- 📱 **Téléphone** : +33 6 67 24 41 40
+- 🌐 **Site web** : [imphair.eu](https://www.imphair.eu)
+- 💼 **LinkedIn** : [Ugur Balci](https://linkedin.com/in/ugur-balci)
+
+---
+
+⭐ **N'hésitez pas à star ce repository si mon profil vous intéresse !**
+
+💬 **Ouvert aux collaborations et opportunités professionnelles**
