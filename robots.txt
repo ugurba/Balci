@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://ugurblc.github.io/sitemap.xml
+Sitemap: https://ugurba.github.io/Balci/sitemap.xml
 
 # SEO optimizations
 Crawl-delay: 1
