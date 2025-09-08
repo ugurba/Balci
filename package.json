@@ -1,7 +1,7 @@
 {
   "name": "ugur-balci-portfolio",
   "version": "1.0.0",
-  "homepage": "https://ugurblc.github.io",
+  "homepage": "https://ugurba.github.io/Balci",
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
