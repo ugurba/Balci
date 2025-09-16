@@ -1508,3 +1508,248 @@ section {
     /* si tu veux un effet léger, tu peux ajouter : */
     /* background-color: rgba(255,255,255,0.05); */
 }
+/* ==============================
+   Loading Screen
+============================== */
+.loading-screen {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background-color:#000;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    flex-direction:column;
+    z-index:9999;
+}
+
+.loading-text {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 4rem;
+    text-align: center;
+    background: linear-gradient(90deg, #00FFFF 0%, #9B30FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    position: absolute;
+    z-index: 10;
+}
+
+#neuron-canvas {
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+
+/* ==============================
+   Navigation
+============================== */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+}
+
+.nav-logo {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-menu .nav-link {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+}
+
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.lang-btn {
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+    background-color: #4dabf7;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+.lang-btn.active {
+    background-color: #9b30ff;
+}
+
+/* Hamburger */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.nav-hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background: #4DABF7;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* ==============================
+   Hero Section
+============================== */
+.hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.hero-image-wrapper {
+    width: 400px;
+    height: 400px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.hero-buttons .btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #4dabf7;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+/* ==============================
+   Contact Methods
+============================== */
+.contact-methods {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* ==============================
+   Timeline Links
+============================== */
+.timeline-item-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.timeline-item-link:hover {
+    cursor: pointer;
+}
+
+/* ==============================
+   Responsive Design
+============================== */
+@media (max-width: 768px) {
+
+    /* Navigation */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background: rgba(10,10,10,0.95);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 1rem 2rem;
+        gap: 1rem;
+        border-top: 1px solid rgba(77,171,247,0.2);
+        z-index: 999;
+    }
+
+    .nav-menu.active {
+        display: flex;
+    }
+
+    .nav-menu .nav-link {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-hamburger {
+        display: flex;
+    }
+
+    .language-switcher {
+        justify-content: center;
+        margin-top: 0.5rem;
+    }
+
+    .nav-container {
+        justify-content: space-between;
+        padding: 1rem;
+    }
+
+    /* Hero Section: image au-dessus du texte */
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .hero-image-wrapper {
+        order: 1;
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero-text {
+        order: 2;
+    }
+
+    /* Boutons Hero */
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.5rem;
+        flex-wrap: nowrap;
+    }
+
+    .hero-buttons .btn {
+        flex: 1 1 auto;
+        max-width: 160px;
+        font-size: 0.85rem;
+        padding: 0.5rem 1rem;
+    }
+}
