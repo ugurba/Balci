@@ -570,4 +570,8 @@ setTimeout(()=>{
     setTimeout(()=>{ document.getElementById('loading-screen').style.display='none'; },500);
 }, 2500);
 
+function toggleMenu() {
+    const menu = document.querySelector('.nav-menu');
+    menu.classList.toggle('active');
+}
 
