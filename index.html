@@ -17,31 +17,35 @@
     <h1 class="loading-text">Ugur Balci</h1>
 </div>
 
+<!-- Navigation -->
+<nav id="navigation" class="navigation">
+    <div class="nav-container">
+        <div class="nav-logo" onclick="scrollToSection('hero')">
+            <span class="logo-icon"></span>
+            <span>Ugur Balci</span>
+        </div>
 
+        <!-- Hamburger mobile -->
+        <div class="nav-hamburger" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
 
-    <!-- Navigation -->
-    <nav id="navigation" class="navigation">
-        <div class="nav-container">
-            <div class="nav-logo" onclick="scrollToSection('hero')">
-                <span class="logo-icon"></span>
-                <span>Ugur Balci</span>
-            </div>
-            
-            <div class="nav-menu">
-                <button class="nav-link" onclick="scrollToSection('about')" data-fr="À propos" data-en="About">À propos</button>
-                <button class="nav-link" onclick="scrollToSection('skills')" data-fr="Compétences" data-en="Skills">Compétences</button>
-                <button class="nav-link" onclick="scrollToSection('experience')" data-fr="Expérience" data-en="Experience">Expérience</button>
-                <button class="nav-link" onclick="scrollToSection('projects')" data-fr="Projets" data-en="Projects">Projets</button>
-                <button class="nav-link" onclick="scrollToSection('contact')" data-fr="Contact" data-en="Contact">Contact</button>
-                
-                <div class="language-switcher">
-                    <button class="lang-btn active" onclick="switchLanguage('fr')">FR</button>
-                    <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
-                </div>
+        <div class="nav-menu">
+            <button class="nav-link" onclick="scrollToSection('about')" data-fr="À propos" data-en="About">À propos</button>
+            <button class="nav-link" onclick="scrollToSection('skills')" data-fr="Compétences" data-en="Skills">Compétences</button>
+            <button class="nav-link" onclick="scrollToSection('experience')" data-fr="Expérience" data-en="Experience">Expérience</button>
+            <button class="nav-link" onclick="scrollToSection('projects')" data-fr="Projets" data-en="Projects">Projets</button>
+            <button class="nav-link" onclick="scrollToSection('contact')" data-fr="Contact" data-en="Contact">Contact</button>
+
+            <div class="language-switcher">
+                <button class="lang-btn active" onclick="switchLanguage('fr')">FR</button>
+                <button class="lang-btn" onclick="switchLanguage('en')">EN</button>
             </div>
         </div>
-    </nav>
-
+    </div>
+</nav>
     <!-- Hero Section -->
     <section id="hero" class="hero-section">
         <canvas id="particles-canvas" class="particles-canvas"></canvas>
