@@ -521,22 +521,76 @@
                 </div>
             </div>
 
-<div class="project-card">
-    <div class="project-image">
-        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="OPTIMISATION">
-        <a href="https://raw.githubusercontent.com/ugurba/Balci/main/OPTIMISATION.ipynb" download>
-            <div class="project-overlay">⬇️</div>
-        </a>
-    </div>
-    <div class="project-content">
-        <h3>Optimisation</h3>
-        <p>Notebook Python pour l'optimisation de fonctions et d'algorithmes.</p>
-        <div class="project-tech">
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">Jupyter</span>
+<section id="projects" class="projects-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title" data-fr="Portfolio Projets" data-en="Projects Portfolio">Portfolio Projets</h2>
+            <p class="section-subtitle" data-fr="Projets & Réalisations Techniques d'Excellence" data-en="Technical Projects & Outstanding Achievements">
+                Projets & Réalisations Techniques d'Excellence
+            </p>
+        </div>
+        
+        <div class="projects-grid">
+
+            <!-- Projet 1 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&h=600&fit=crop" alt="OPTIMISATION">
+                    <a href="https://raw.githubusercontent.com/ugurba/Balci/main/OPTIMISATION.ipynb" onclick="downloadFile(event)">
+                        <div class="project-overlay">⬇️</div>
+                    </a>
+                </div>
+                <div class="project-content">
+                    <h3>Optimisation</h3>
+                    <p>Notebook Python pour l'optimisation de fonctions et d'algorithmes.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Jupyter</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Projet 2 -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1682687222621-9a1eaa6a2a8f?w=800&h=600&fit=crop" alt="IA TP5">
+                    <a href="https://raw.githubusercontent.com/ugurba/Balci/main/TP5_FRI-IAFA_Balci_Ugur.ipynb" onclick="downloadFile(event)">
+                        <div class="project-overlay">⬇️</div>
+                    </a>
+                </div>
+                <div class="project-content">
+                    <h3>IA - TP5 Apprentissage Supervisé</h3>
+                    <p>Implementation de modèles de classification supervisée (régression logistique, SVM, réseaux de neurones).</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">Pandas</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ajouter d'autres projets ici de la même manière -->
+
         </div>
     </div>
-</div>
+</section>
+
+<script>
+function downloadFile(event) {
+    event.preventDefault();
+    const url = event.currentTarget.href;
+    fetch(url)
+        .then(resp => resp.blob())
+        .then(blob => {
+            const a = document.createElement('a');
+            a.href = window.URL.createObjectURL(blob);
+            // Nom du fichier selon l'URL
+            const filename = url.split('/').pop();
+            a.download = filename;
+            a.click();
+        });
+}
+</script>
 
 
 
