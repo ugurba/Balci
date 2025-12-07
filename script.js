@@ -574,13 +574,3 @@ function toggleMenu() {
     const menu = document.querySelector('.nav-menu');
     menu.classList.toggle('active');
 }
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const card = document.getElementById('ai-floating-card');
-    const textElement = document.getElementById('ai-card-text');
-    
-    const originalText = "TESTER LE CHATBOT IA DE UGUR";
-    const promptText = "👋 Posez-moi une question !";
-    
-</script>
