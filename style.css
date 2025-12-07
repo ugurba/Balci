@@ -3327,5 +3327,17 @@ section {
         padding: 0.7rem 1.2rem;
         font-size: 0.85rem;
     }
+
+    /* Animation de rebond pour la carte IA */
+@keyframes gentle-bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-15px);}
+    60% {transform: translateY(-7px);}
+}
+
+/* Classe qui sera ajoutée par le Javascript pour déclencher l'animation */
+.trigger-bounce {
+    animation: gentle-bounce 1s ease;
+}
 }
 
