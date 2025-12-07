@@ -583,35 +583,4 @@ document.addEventListener('DOMContentLoaded', function() {
     const originalText = "TESTER LE CHATBOT IA DE UGUR";
     const promptText = "👋 Posez-moi une question !";
     
-    // Fonction qui déclenche l'animation et change le texte
-    function grabAttention() {
-        // 1. Activer l'animation de rebond
-        card.classList.add('trigger-bounce');
-        
-        // Retirer la classe après 1 seconde (fin de l'animation) pour pouvoir la relancer plus tard
-        setTimeout(() => {
-            card.classList.remove('trigger-bounce');
-        }, 1000);
-        
-        // 2. Changer le texte temporairement
-        textElement.textContent = promptText;
-        textElement.style.color = "#d35400"; // Change la couleur en orange pour attirer l'oeil (optionnel)
-
-        // Revenir au texte original après 8 secondes
-        setTimeout(() => {
-            textElement.textContent = originalText;
-            textElement.style.color = "#00205b"; // Revient au bleu Airbus
-        }, 8000);
-    }
-
-    // DÉCLENCHEUR : Toutes les 5 minutes
-    // 5 minutes * 60 secondes * 1000 millisecondes = 300000
-    setInterval(grabAttention, 300000);
-
-    // TEST : Décommente la ligne ci-dessous pour tester toutes les 10 secondes
-    // setInterval(grabAttention, 10000);
-    
-    // Optionnel : Lancer une première fois après 3 secondes sur le site
-    setTimeout(grabAttention, 3000);
-});
 </script>
